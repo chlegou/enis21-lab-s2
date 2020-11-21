@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberListComponent implements OnInit {
 
+  displayedColumns: string[] = ['id', 'cin', 'name', 'type', 'cv', 'createdDate'];
   dataSource: any[] = [
     {
       id: '123456',
