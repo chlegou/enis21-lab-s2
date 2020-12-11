@@ -22,9 +22,14 @@ export class MemberListComponent implements OnInit {
   }
 
   fetchDataSource(): void {
-    this.dataSource = this.memberService.placeholderMembers;
+    this.memberService.getAllMembers().then(data => {
+      this.dataSource = data;
+    });
   }
 
   onRemoveAccount(id: string): void {
+    this.memberService.removeMemberById(id).then(() => {
+      this.fetchDataSource();
+    });
   }
 }
