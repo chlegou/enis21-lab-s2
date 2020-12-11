@@ -27,4 +27,8 @@ export class MemberFormComponent implements OnInit {
   onSubmit(): void {
     console.log(this.form.value);
   }
+
+  isFormInEditMode(): boolean {
+    return false;
+  }
 }

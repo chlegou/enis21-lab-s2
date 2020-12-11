@@ -9,7 +9,7 @@ import {Member} from '../../models/member.model';
 })
 export class MemberListComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'cin', 'name', 'type', 'cv', 'createdDate'];
+  displayedColumns: string[] = ['id', 'cin', 'name', 'type', 'cv', 'createdDate', 'actions'];
   dataSource: Member[] = [];
 
   constructor(
@@ -25,4 +25,6 @@ export class MemberListComponent implements OnInit {
     this.dataSource = this.memberService.placeholderMembers;
   }
 
+  onRemoveAccount(id: string): void {
+  }
 }
